@@ -1,4 +1,4 @@
-# github-manager
+# Git-Manager
 Manage your github stars and profile.
 
 ## Features & TODOs
