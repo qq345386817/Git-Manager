@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import RxSwift
+import RxAlamofire
 
 class GMLoginViewController: UIViewController {
 
@@ -21,15 +24,17 @@ class GMLoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func login(_ sender: UIButton) {
+        let oauthVC = OAuthViewController()
+        let nav = UINavigationController(rootViewController: oauthVC)
+        show(nav, sender: sender)
+//        RxAlamofire.requestJSON(.get, url)
+//            .debug()
+//            .subscribe(onNext: { [weak self] (r, json) in
+//
+//                }, onError: { [weak self] (error) in
+//                    print(error)
+//            })
     }
-    */
 
 }

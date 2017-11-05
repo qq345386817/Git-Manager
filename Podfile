@@ -10,6 +10,7 @@ target 'Git-Manager' do
     pod 'RxSwift', '~> 4.0'
     pod 'RxCocoa', '~> 4.0'
     pod 'RxAlamofire'
+    pod 'Then'
 end
 
 target 'Git-ManagerTests' do

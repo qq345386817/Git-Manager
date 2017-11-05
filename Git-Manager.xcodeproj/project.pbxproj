@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		234E39E7D3A7C408B0AC46EF /* Pods_Git_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB04F7AB8B397BA53E8347C /* Pods_Git_Manager.framework */; };
 		BC806D38D93CB86BD4CC4D2D /* Pods_Git_ManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F88BBA45B81E59B9097EDE8 /* Pods_Git_ManagerTests.framework */; };
+		C2A2ABF91FAF2BE5003D839A /* GMLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A2ABF81FAF2BE5003D839A /* GMLoginViewController.storyboard */; };
+		C2A2ABFB1FAF2FB9003D839A /* GMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A2ABFA1FAF2FB9003D839A /* GMConstants.swift */; };
+		C2A2ABFE1FAF3A03003D839A /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A2ABFC1FAF3A03003D839A /* OAuthViewController.swift */; };
 		C922F38F1FAED3FE008C74D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922F38E1FAED3FE008C74D4 /* AppDelegate.swift */; };
 		C922F3961FAED3FE008C74D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C922F3951FAED3FE008C74D4 /* Assets.xcassets */; };
 		C922F3991FAED3FE008C74D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C922F3971FAED3FE008C74D4 /* LaunchScreen.storyboard */; };
@@ -41,6 +44,9 @@
 		9AB04F7AB8B397BA53E8347C /* Pods_Git_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Git_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F88BBA45B81E59B9097EDE8 /* Pods_Git_ManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Git_ManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1264242CAFAB75D3494F9B8 /* Pods-Git-Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Git-Manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Git-Manager/Pods-Git-Manager.debug.xcconfig"; sourceTree = "<group>"; };
+		C2A2ABF81FAF2BE5003D839A /* GMLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = GMLoginViewController.storyboard; path = Views/GMLoginViewController.storyboard; sourceTree = "<group>"; };
+		C2A2ABFA1FAF2FB9003D839A /* GMConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMConstants.swift; sourceTree = "<group>"; };
+		C2A2ABFC1FAF3A03003D839A /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		C922F38B1FAED3FE008C74D4 /* Git-Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git-Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C922F38E1FAED3FE008C74D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C922F3951FAED3FE008C74D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,7 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				C922F38E1FAED3FE008C74D4 /* AppDelegate.swift */,
+				C2A2ABFA1FAF2FB9003D839A /* GMConstants.swift */,
 				C9E71DBA1FAF26E1008457E8 /* GMLoginViewController.swift */,
+				C2A2ABF81FAF2BE5003D839A /* GMLoginViewController.storyboard */,
+				C2A2ABFC1FAF3A03003D839A /* OAuthViewController.swift */,
 				C922F3BC1FAED73B008C74D4 /* GMHomeViewController.swift */,
 				C922F3951FAED3FE008C74D4 /* Assets.xcassets */,
 				C922F3971FAED3FE008C74D4 /* LaunchScreen.storyboard */,
@@ -272,6 +281,7 @@
 			files = (
 				C922F3991FAED3FE008C74D4 /* LaunchScreen.storyboard in Resources */,
 				C922F3961FAED3FE008C74D4 /* Assets.xcassets in Resources */,
+				C2A2ABF91FAF2BE5003D839A /* GMLoginViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +347,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -345,6 +356,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -414,8 +426,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E71DBB1FAF26E1008457E8 /* GMLoginViewController.swift in Sources */,
+				C2A2ABFB1FAF2FB9003D839A /* GMConstants.swift in Sources */,
 				C922F38F1FAED3FE008C74D4 /* AppDelegate.swift in Sources */,
 				C922F3BD1FAED73B008C74D4 /* GMHomeViewController.swift in Sources */,
+				C2A2ABFE1FAF3A03003D839A /* OAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
