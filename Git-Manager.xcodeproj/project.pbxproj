@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		234E39E7D3A7C408B0AC46EF /* Pods_Git_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB04F7AB8B397BA53E8347C /* Pods_Git_Manager.framework */; };
+		BC806D38D93CB86BD4CC4D2D /* Pods_Git_ManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F88BBA45B81E59B9097EDE8 /* Pods_Git_ManagerTests.framework */; };
 		C922F38F1FAED3FE008C74D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922F38E1FAED3FE008C74D4 /* AppDelegate.swift */; };
 		C922F3961FAED3FE008C74D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C922F3951FAED3FE008C74D4 /* Assets.xcassets */; };
 		C922F3991FAED3FE008C74D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C922F3971FAED3FE008C74D4 /* LaunchScreen.storyboard */; };
 		C922F3A41FAED3FE008C74D4 /* Git_ManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922F3A31FAED3FE008C74D4 /* Git_ManagerTests.swift */; };
 		C922F3AF1FAED3FE008C74D4 /* Git_ManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922F3AE1FAED3FE008C74D4 /* Git_ManagerUITests.swift */; };
 		C922F3BD1FAED73B008C74D4 /* GMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922F3BC1FAED73B008C74D4 /* GMHomeViewController.swift */; };
+		C9E71DBB1FAF26E1008457E8 /* GMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E71DBA1FAF26E1008457E8 /* GMLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DD923342BF71FF0B9F622B1 /* Pods-Git-ManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Git-ManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Git-ManagerTests/Pods-Git-ManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		50011E215AC153C701457C34 /* Pods-Git-ManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Git-ManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Git-ManagerTests/Pods-Git-ManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		9AB04F7AB8B397BA53E8347C /* Pods_Git_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Git_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F88BBA45B81E59B9097EDE8 /* Pods_Git_ManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Git_ManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1264242CAFAB75D3494F9B8 /* Pods-Git-Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Git-Manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Git-Manager/Pods-Git-Manager.debug.xcconfig"; sourceTree = "<group>"; };
 		C922F38B1FAED3FE008C74D4 /* Git-Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git-Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C922F38E1FAED3FE008C74D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		C922F3AE1FAED3FE008C74D4 /* Git_ManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Git_ManagerUITests.swift; sourceTree = "<group>"; };
 		C922F3B01FAED3FE008C74D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C922F3BC1FAED73B008C74D4 /* GMHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMHomeViewController.swift; sourceTree = "<group>"; };
+		C9E71DBA1FAF26E1008457E8 /* GMLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMLoginViewController.swift; sourceTree = "<group>"; };
 		E70994CBD681D0E2E83986D3 /* Pods-Git-Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Git-Manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-Git-Manager/Pods-Git-Manager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC806D38D93CB86BD4CC4D2D /* Pods_Git_ManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,8 @@
 			children = (
 				C1264242CAFAB75D3494F9B8 /* Pods-Git-Manager.debug.xcconfig */,
 				E70994CBD681D0E2E83986D3 /* Pods-Git-Manager.release.xcconfig */,
+				0DD923342BF71FF0B9F622B1 /* Pods-Git-ManagerTests.debug.xcconfig */,
+				50011E215AC153C701457C34 /* Pods-Git-ManagerTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -90,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				9AB04F7AB8B397BA53E8347C /* Pods_Git_Manager.framework */,
+				9F88BBA45B81E59B9097EDE8 /* Pods_Git_ManagerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				C922F38E1FAED3FE008C74D4 /* AppDelegate.swift */,
+				C9E71DBA1FAF26E1008457E8 /* GMLoginViewController.swift */,
 				C922F3BC1FAED73B008C74D4 /* GMHomeViewController.swift */,
 				C922F3951FAED3FE008C74D4 /* Assets.xcassets */,
 				C922F3971FAED3FE008C74D4 /* LaunchScreen.storyboard */,
@@ -173,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C922F3B61FAED3FE008C74D4 /* Build configuration list for PBXNativeTarget "Git-ManagerTests" */;
 			buildPhases = (
+				9D7A060215575EC204C7F9B1 /* [CP] Check Pods Manifest.lock */,
 				C922F39B1FAED3FE008C74D4 /* Sources */,
 				C922F39C1FAED3FE008C74D4 /* Frameworks */,
 				C922F39D1FAED3FE008C74D4 /* Resources */,
+				DE1DE35B401F866C6DB657AB /* [CP] Embed Pods Frameworks */,
+				D3B536432F9E461A7E8BE31C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,15 +334,76 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Git-Manager/Pods-Git-Manager-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Git-Manager/Pods-Git-Manager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D7A060215575EC204C7F9B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Git-ManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3B536432F9E461A7E8BE31C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Git-ManagerTests/Pods-Git-ManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE1DE35B401F866C6DB657AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Git-ManagerTests/Pods-Git-ManagerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Git-ManagerTests/Pods-Git-ManagerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -338,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E71DBB1FAF26E1008457E8 /* GMLoginViewController.swift in Sources */,
 				C922F38F1FAED3FE008C74D4 /* AppDelegate.swift in Sources */,
 				C922F3BD1FAED73B008C74D4 /* GMHomeViewController.swift in Sources */,
 			);
@@ -527,6 +603,7 @@
 		};
 		C922F3B71FAED3FE008C74D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DD923342BF71FF0B9F622B1 /* Pods-Git-ManagerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +621,7 @@
 		};
 		C922F3B81FAED3FE008C74D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50011E215AC153C701457C34 /* Pods-Git-ManagerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

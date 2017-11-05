@@ -4,11 +4,15 @@ platform :ios, '9.0'
 inhibit_all_warnings!
 use_frameworks!
 
-def pods
+target 'Git-Manager' do
     pod 'Alamofire', '~> 4.5'
     pod 'Kingfisher', '~> 4.0'
+    pod 'RxSwift', '~> 4.0'
+    pod 'RxCocoa', '~> 4.0'
+    pod 'RxAlamofire'
 end
 
-target 'Git-Manager' do
-	pods
+target 'Git-ManagerTests' do
+    pod 'RxBlocking', '~> 4.0'
+    pod 'RxTest',     '~> 4.0'
 end
