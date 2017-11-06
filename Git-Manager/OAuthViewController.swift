@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import Then
+import Alamofire
 
 class OAuthViewController: UIViewController, WKNavigationDelegate {
     
@@ -61,7 +62,14 @@ class OAuthViewController: UIViewController, WKNavigationDelegate {
     }
     
     fileprivate func loadAccessToken(_ code: String) {
-        
+        let url = "https://github.com/login/oauth/access_token"
+        let params = ["code": code, "client_secret": clientSecret, "client_id": clientID]
+        let headers: HTTPHeaders = [
+            "Accept": "application/json"
+        ]
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            
+        }
     }
 
 }
