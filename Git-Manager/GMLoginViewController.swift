@@ -28,13 +28,6 @@ class GMLoginViewController: UIViewController {
         let oauthVC = OAuthViewController()
         let nav = UINavigationController(rootViewController: oauthVC)
         show(nav, sender: sender)
-//        RxAlamofire.requestJSON(.get, url)
-//            .debug()
-//            .subscribe(onNext: { [weak self] (r, json) in
-//
-//                }, onError: { [weak self] (error) in
-//                    print(error)
-//            })
     }
 
 }

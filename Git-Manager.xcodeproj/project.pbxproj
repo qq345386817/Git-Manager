@@ -12,6 +12,8 @@
 		C2A2ABF91FAF2BE5003D839A /* GMLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A2ABF81FAF2BE5003D839A /* GMLoginViewController.storyboard */; };
 		C2A2ABFB1FAF2FB9003D839A /* GMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A2ABFA1FAF2FB9003D839A /* GMConstants.swift */; };
 		C2A2ABFE1FAF3A03003D839A /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A2ABFC1FAF3A03003D839A /* OAuthViewController.swift */; };
+		C2E9B8401FB0C1970034531B /* GMAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9B83F1FB0C1970034531B /* GMAlertController.swift */; };
+		C2E9B8421FB0C2390034531B /* UIViewController+GMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9B8411FB0C2390034531B /* UIViewController+GMExtension.swift */; };
 		C922F38F1FAED3FE008C74D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C922F38E1FAED3FE008C74D4 /* AppDelegate.swift */; };
 		C922F3961FAED3FE008C74D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C922F3951FAED3FE008C74D4 /* Assets.xcassets */; };
 		C922F3991FAED3FE008C74D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C922F3971FAED3FE008C74D4 /* LaunchScreen.storyboard */; };
@@ -47,6 +49,8 @@
 		C2A2ABF81FAF2BE5003D839A /* GMLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = GMLoginViewController.storyboard; path = Views/GMLoginViewController.storyboard; sourceTree = "<group>"; };
 		C2A2ABFA1FAF2FB9003D839A /* GMConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMConstants.swift; sourceTree = "<group>"; };
 		C2A2ABFC1FAF3A03003D839A /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		C2E9B83F1FB0C1970034531B /* GMAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMAlertController.swift; sourceTree = "<group>"; };
+		C2E9B8411FB0C2390034531B /* UIViewController+GMExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GMExtension.swift"; sourceTree = "<group>"; };
 		C922F38B1FAED3FE008C74D4 /* Git-Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git-Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C922F38E1FAED3FE008C74D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C922F3951FAED3FE008C74D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				C9E71DBA1FAF26E1008457E8 /* GMLoginViewController.swift */,
 				C2A2ABF81FAF2BE5003D839A /* GMLoginViewController.storyboard */,
 				C2A2ABFC1FAF3A03003D839A /* OAuthViewController.swift */,
+				C2E9B83F1FB0C1970034531B /* GMAlertController.swift */,
+				C2E9B8411FB0C2390034531B /* UIViewController+GMExtension.swift */,
 				C922F3BC1FAED73B008C74D4 /* GMHomeViewController.swift */,
 				C922F3951FAED3FE008C74D4 /* Assets.xcassets */,
 				C922F3971FAED3FE008C74D4 /* LaunchScreen.storyboard */,
@@ -178,7 +184,6 @@
 				C922F3881FAED3FE008C74D4 /* Frameworks */,
 				C922F3891FAED3FE008C74D4 /* Resources */,
 				8599F309CBD233EEDEA8994D /* [CP] Embed Pods Frameworks */,
-				3EE5684D98D5A043DF077FC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,7 +203,6 @@
 				C922F39C1FAED3FE008C74D4 /* Frameworks */,
 				C922F39D1FAED3FE008C74D4 /* Resources */,
 				DE1DE35B401F866C6DB657AB /* [CP] Embed Pods Frameworks */,
-				D3B536432F9E461A7E8BE31C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,21 +324,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3EE5684D98D5A043DF077FC0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Git-Manager/Pods-Git-Manager-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8599F309CBD233EEDEA8994D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,6 +334,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
@@ -354,6 +344,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
@@ -381,21 +372,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D3B536432F9E461A7E8BE31C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Git-ManagerTests/Pods-Git-ManagerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DE1DE35B401F866C6DB657AB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,12 +379,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Git-ManagerTests/Pods-Git-ManagerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
@@ -425,10 +403,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E9B8401FB0C1970034531B /* GMAlertController.swift in Sources */,
 				C9E71DBB1FAF26E1008457E8 /* GMLoginViewController.swift in Sources */,
 				C2A2ABFB1FAF2FB9003D839A /* GMConstants.swift in Sources */,
 				C922F38F1FAED3FE008C74D4 /* AppDelegate.swift in Sources */,
 				C922F3BD1FAED73B008C74D4 /* GMHomeViewController.swift in Sources */,
+				C2E9B8421FB0C2390034531B /* UIViewController+GMExtension.swift in Sources */,
 				C2A2ABFE1FAF3A03003D839A /* OAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -575,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -594,7 +574,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikangtai.Git-Manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -610,7 +590,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikangtai.Git-Manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -627,7 +607,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikangtai.Git-ManagerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Git-Manager.app/Git-Manager";
 			};
@@ -645,7 +625,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikangtai.Git-ManagerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Git-Manager.app/Git-Manager";
 			};
@@ -661,7 +641,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikangtai.Git-ManagerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Git-Manager";
 			};
@@ -677,7 +657,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ikangtai.Git-ManagerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Git-Manager";
 			};

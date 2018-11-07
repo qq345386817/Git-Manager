@@ -9,7 +9,9 @@
 import UIKit
 import WebKit
 import Then
+import RxAlamofire
 import Alamofire
+import RxSwift
 
 class OAuthViewController: UIViewController, WKNavigationDelegate {
     
@@ -26,7 +28,7 @@ class OAuthViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
 
         title = "GitHub OAuth"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(cancel))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(cancel))
         
         let url = "https://github.com/login/oauth/authorize?scope=user:email&client_id=" + clientID
         webView.load(URLRequest(url: URL(string: url)!))
@@ -56,6 +58,7 @@ class OAuthViewController: UIViewController, WKNavigationDelegate {
                     cancel()
                 }
                 decisionHandler(.cancel)
+                return
             }
         }
         decisionHandler(.allow)
@@ -64,12 +67,23 @@ class OAuthViewController: UIViewController, WKNavigationDelegate {
     fileprivate func loadAccessToken(_ code: String) {
         let url = "https://github.com/login/oauth/access_token"
         let params = ["code": code, "client_secret": clientSecret, "client_id": clientID]
-        let headers: HTTPHeaders = [
-            "Accept": "application/json"
-        ]
-        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
-            
+        let headers: HTTPHeaders = ["Accept": "application/json"]
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
+            if let error = response.result.error {
+                GMAlertController.showAlert(title: "⚠️ Error", message: error.localizedDescription, confirmAction: ("ok", nil), cancelAction: nil)
+            } else {
+                print(response.result.value ?? "⚠️ Warning: Response is nil.")
+            }
         }
+//        RxAlamofire.requestJSON(.post, url, parameters: params, encoding: JSONEncoding.default, headers: headers)
+//            .debug()
+//            .subscribe(onNext: { (r, json) in
+//                print(json)
+//            }, onError: { (error) in
+//                print(error)
+//                GMAlertController.showAlert(title: "⚠️ Error", message: error.localizedDescription, confirmAction: ("ok", nil), cancelAction: nil)
+//            }, onCompleted: nil, onDisposed: nil)
+//            .disposed(by: DisposeBag())
     }
 
 }
